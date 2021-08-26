@@ -1,0 +1,96 @@
+<html>
+   <head>
+       <title>Restaurant</title>
+       <link rel="stylesheet" href="referstyle.css">
+       <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+   </head>
+   <body class="flexcontainer"> 
+    
+    <div>
+        <h1>Tables</h1>
+        <input type="text" id="table" placeholder="Enter the Table Number" onkeyup="SearchTable()"> 
+        <div id="tables">
+         <div id="Table-1"ondragover="allowDrop(event)" ondrop="drop(event)" >
+             <ul>
+                <li>Table-1</li>
+                <li>0</li>
+                <li>0</li>
+                <button class="btn">Table-1</button>
+             </ul>
+         </div>  
+             <div id="Table-2" ondragover="allowDrop(event)" ondrop="drop(event)">
+                 <ul >
+                    <li>Table-2</li>
+                    <li>0</li>
+                    <li>0</li>
+                    <button class="btn">Table-2</button>
+                 </ul>
+             </div>
+             <div id="Table-3" ondragover="allowDrop(event)" ondrop="drop(event)">
+                 <ul >
+                    <li>Table-3</li>
+                    <li>0</li>
+                    <li>0</li>
+                    <button class="btn">Table-3</button>
+                 </ul>
+             </div>
+        </div>
+    
+    </div>
+    <div>
+        <h1>Food Items</h1>
+        <input type="text" id="myInput" placeholder="Enter the food Item" onkeyup="Search()"> 
+        <div id="items" class="scroll">
+         
+        </div>
+    </div>
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup1()">×</div>
+           <h3>Order Details | Table-1</h3>
+           <table id="data-price-1">
+               <tr>
+               <th>sno</th>
+               <th>Food Item</th>
+               <th>Price</th>
+               </tr>
+           </table>
+        </div>
+      </div>
+
+    <div class="popup" id="popup-2">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup2()">×</div>
+          <h3>Order Details | Table-2</h3>
+          <table id="data-price-2" >
+            <tr>
+            <th>sno</th>
+            <th>Food Item</th>
+            <th>Price</th>
+            </tr>
+        </table>
+        </div>
+      </div>
+
+ <div class="popup" id="popup-3">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup3()">×</div>
+      <h3>Order Deatils | Table-3</h3>
+      <table id="data-price-3">
+        <tr>
+        <th>sno</th>
+        <th>Food Item</th>
+        <th>Price</th>
+        </tr>
+    </table>
+    </div>
+  </div>
+  
+
+   </body>
+   <script type="text/javascript" src="referdata.json"></script>
+   <script type="text/javascript" src="referscript.js"></script>
+</html>

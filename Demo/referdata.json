@@ -1,0 +1,38 @@
+items = '[
+    {
+        "name": "veg rice",
+        "price": "30.00"
+    },
+    {
+        "name": "Fried rice",
+        "price": "60.00"
+    },
+    {
+        "name": "rice",
+        "price": "40.00"
+    },
+    {
+        "name": "biryani",
+        "price": "80.00"
+    },
+    {
+        "name": "chicken",
+        "price": "140.00"
+    },
+    {
+        "name": "mutton",
+        "price": "400.00"
+    },
+    {
+        "name": "fish",
+        "price": "260.00"
+    },
+    {
+        "name": "curd",
+        "price": "40.00"
+    },
+    {
+        "name": "icecream",
+        "price": "70.00"
+    }
+];

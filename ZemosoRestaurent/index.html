@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Zemoso Restaurent</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <h2>Zemoso Restaurent</h2>
+    <hr>
+    <div class="tables" id="tables">
+        <h3>Tables</h3>
+        <input class="searchTable" type="text" name="tablename" id="searchTableInput" placeholder="Search Table" onkeyup="searchTable()"/>
+        
+        <br><br><br>
+        <div id="Table-1" class="table one" ondragover="addItemOnDrop(event)" ondrop="onDropUpdateTableItems(event)">
+            <ul>
+                <li class="tablename" id ="1">Table-1</li>
+                <li>Quantity:0</li>
+                <li>Price:0</li>
+                <!-- <button class="button" onclick="togglePopup1()">Pay Bill</button> -->
+             </ul>
+        </div>
+        <div id="Table-2" class="table two" ondragover="addItemOnDrop(event)" ondrop="onDropUpdateTableItems(event)">
+            <ul>
+                <li class="tablename" id = "2">Table-2</li>
+                <li>Quantity:0</li>
+                <li>Price:0</li>
+                <!-- <button class="button" onclick="payBill()">Pay Bill</button> -->
+             </ul>
+        </div>
+        <div id="Table-3" class="table three" ondragover="addItemOnDrop(event)" ondrop="onDropUpdateTableItems(event)">
+            <ul>
+                <li class="tablename" id ="3">Table-3</li>
+                <li>Quantity:0</li>
+                <li>Price:0</li>
+                <!-- <button class="button" onclick="payBill()">Pay Bill</button> -->
+             </ul>
+        </div>
+    </div>
+    
+    <div class="menu">
+        <h3>Menu</h3>
+        <input class="searchMenu" type="text" name="itemname" id="searchItemInput" placeholder="Search menu..by food" onkeyup="debounce(searchItem(),3000)"/>
+        <br><br><br>
+        <div class="items" id="items">
+                <!--Items will be loaded dynamically-->
+        </div>
+    </div>
+    <!--Popup boxes for paying Bill-->
+
+    <div class="popup"  id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()" id="1">×</div>
+           <h3>Order Details | Table-1</h3>
+           <table id="data-price-1" onclick="togglePopup">
+               <tr>
+               <th>sno</th>
+               <th>Food Item</th>
+               <th>Price</th>
+               </tr>
+           </table>
+        </div>
+      </div>
+
+
+    <div class="popup" id="popup-2">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()">×</div>
+           <h3>Order Details | Table-2</h3>
+           <table id="data-price-2" onclick="togglePopup">
+               <tr>
+               <th>sno</th>
+               <th>Food Item</th>
+               <th>Price</th>
+               </tr>
+           </table>
+        </div>
+      </div>
+
+      <div class="popup" id="popup-3">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()">×</div>
+           <h3>Order Details | Table-3</h3>
+           <table id="data-price-3" onclick="togglePopup">
+               <tr>
+               <th>sno</th>
+               <th>Food Item</th>
+               <th>Price</th>
+               </tr>
+           </table>
+        </div>
+      </div>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

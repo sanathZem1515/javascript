@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Storage Assignment</title>
+</head>
+<script type="text/javascript">
+    sessionStorage.setItem("sessionScore", 0);
+
+    document.getElementById('localCount').innerHTML = localStorage.getItem("local");
+    document.getElementById('sessionCount').innerHTML = sessionStorage.getItem("session");
+
+
+    function localStorageCount() {
+        console.log(localStorage.getItem("local"))
+        localStorage.setItem("local", Number(localStorage.getItem("local")) + 1);
+        document.getElementById('localCount').innerHTML = localStorage.getItem("local");
+    }
+
+    function sessionStorageCount() {
+        sessionStorage.setItem("session", Number(sessionStorage.getItem("session")) + 1);
+        document.getElementById('sessionCount').innerHTML = sessionStorage.getItem("session");
+
+    }
+
+</script>
+
+<body>
+    <h2>Local Storage</h2>
+    <h3 id="localCount"></h3>
+    <button onclick="localStorageCount()">Increment</button>
+    <br>
+    <hr>
+    <h2>Session Storage</h2>
+    <h3 id="sessionCount"></h3>
+    <button onclick="sessionStorageCount()">Increment</button>
+
+</body>
+
+</html>
